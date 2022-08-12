@@ -20,6 +20,40 @@ Console.WriteLine($"New version of {randomNumber} is {newNumber}");
 
 
 
+// Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+
+int ThirtDigit(int number)
+{
+    while (number >= 1000)
+    {
+        number = number / 10;
+    }
+
+    if (number <  99)
+    {
+        Console.WriteLine($" {number} does not have a third digit");   
+    }
+    else 
+    {
+        number = number % 10;
+    }
+    return number;       
+} 
+
+Console.WriteLine("Input numbur: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+int thirtDigit = ThirtDigit(number);
+Console.WriteLine($"The third digit of {number} is {thirtDigit} ");
+
+
+
+
+
+
+
+
+
 
 
 
@@ -41,7 +75,6 @@ int FindBiggestDigit(int number)
     return max;
 
 }
-
 
 
 int randomNumber = new Random().Next(10, 100);
