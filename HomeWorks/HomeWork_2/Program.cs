@@ -22,7 +22,7 @@ Console.WriteLine($"New version of {randomNumber} is {newNumber}");
 
 // Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 
-int ThirtDigit(int number)
+void ThirtDigit(int number)
 {
     while (number >= 1000)
     {
@@ -47,7 +47,12 @@ int thirtDigit = ThirtDigit(number);
 Console.WriteLine($"The third digit of {number} is {thirtDigit} ");
 
 
+/*int reminder = num2 % num1;
 
+    if(reminder == 0)
+        Console.WriteLine($"{num2} is IsDivisionabl of {num1} ");
+    else
+       Console.WriteLine($"{num2} is not IsDivisionabl of {num1}. Reminder is {reminder} ");  */ 
 
 
 
