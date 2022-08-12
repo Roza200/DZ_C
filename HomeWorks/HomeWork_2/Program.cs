@@ -29,35 +29,17 @@ void ThirtDigit(int number)
         number = number / 10;
     }
 
-    if (number <  99)
-    {
-        Console.WriteLine($" {number} does not have a third digit");   
-    }
+    if (number <  100)
+         Console.WriteLine($" {number} does not have a third digit");  
+    
     else 
-    {
-        number = number % 10;
-    }
-    return number;       
+       Console.WriteLine($" a third digit {number % 10} ");     
 } 
 
-Console.WriteLine("Input numbur: ");
+Console.Write("Input numbur: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int thirtDigit = ThirtDigit(number);
-Console.WriteLine($"The third digit of {number} is {thirtDigit} ");
-
-
-/*int reminder = num2 % num1;
-
-    if(reminder == 0)
-        Console.WriteLine($"{num2} is IsDivisionabl of {num1} ");
-    else
-       Console.WriteLine($"{num2} is not IsDivisionabl of {num1}. Reminder is {reminder} ");  */ 
-
-
-
-
-
+ThirtDigit(number);
 
 
 
