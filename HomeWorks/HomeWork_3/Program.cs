@@ -2,16 +2,18 @@
 
 
 void FiveDigitNumber(int number)
-
 {
     
      if (number % 10 == (number % 100000) /10000 && (number % 100) /10 == (number % 10000) /1000)
      
-       Console.WriteLine($"This number {number} is palindrome ");
+       Console.WriteLine($"Number {number} is palindrome ");
     else
-       Console.WriteLine($"This number {number} is not palindrome ");   
+       Console.WriteLine($"Number {number} is not palindrome ");  
+
+    
 }
-Console.WriteLine("Input number: ");
+
+Console.WriteLine("Input five - digit number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 FiveDigitNumber(number);
 
