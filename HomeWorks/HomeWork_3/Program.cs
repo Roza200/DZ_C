@@ -1,15 +1,11 @@
 ﻿// Задача 19. Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
-/*
+
 void FiveDigitNumber(int number)
 
 {
-    int number5 = number % 10;
-    int number4 = (number % 100) /10;
-    int number2 = (number % 10000) /1000;
-    int number1 = (number % 100000) /10000;
     
-     if (number5 == number1 && number4 == number2)
+     if (number % 10 == (number % 100000) /10000 && (number % 100) /10 == (number % 10000) /1000)
      
        Console.WriteLine($"This number {number} is palindrome ");
     else
@@ -18,7 +14,7 @@ void FiveDigitNumber(int number)
 Console.WriteLine("Input number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 FiveDigitNumber(number);
-*/
+
 
 
 
