@@ -1,6 +1,6 @@
 ﻿// Задача 19. Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
-
+/*
 void FiveDigitNumber(int number)
 {
     
@@ -9,15 +9,13 @@ void FiveDigitNumber(int number)
        Console.WriteLine($"Number {number} is palindrome ");
     else
        Console.WriteLine($"Number {number} is not palindrome ");  
-
-    
 }
 
 Console.WriteLine("Input five - digit number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 FiveDigitNumber(number);
 
-
+*/
 
 
 //Задача 21. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
