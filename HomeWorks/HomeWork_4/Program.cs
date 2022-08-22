@@ -1,6 +1,5 @@
 ﻿// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
-//3, 5 -> 243 (3⁵)
-//2, 4 -> 16
+/*
 int DegreeNumber(int numberA,int numberB)
 {
    int result = 1;
@@ -19,7 +18,27 @@ int b = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine($"{a} to the power of {b} equals {DegreeNumber(a, b)} ");
 
+*/
 
+//Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе. 
+/*
+int FindSum(int number)
+{ 
+   int sum = 0;
+   while (number > 0)
+   {
+    int num = number % 10;
+    number = number/10;
+    sum = sum + num;
+   }  
+   return sum;
+}
+
+Console.Write("Input integer number: ");
+int a = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine($"Sum of all the numbers from {a} is {FindSum(a)}");
+*/
 
 
 //Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
