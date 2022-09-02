@@ -103,7 +103,7 @@ int[] CreateRandomArray(int size, int minValue, int maxValue)
 
 void ShowArray(int[] array) 
 {
-  for(int i =0; i < array.Length; i++)
+  for(int i = 0; i < array.Length; i++)
      Console.Write(array[i] + " ");
 
   Console.WriteLine(); 
@@ -111,8 +111,8 @@ void ShowArray(int[] array)
   
 void FindDifferenceMinMax(int[] array)
 {
-  int maxNumber = 0;
-  int minNumber = 0;
+  int maxNumber = array[0];
+  int minNumber = array[0];
     for (int i = 0; i < array.Length; i++)
     {
       if( array[i] > maxNumber)
@@ -141,5 +141,5 @@ int[] myArray = CreateRandomArray(a, min, max);
 
 ShowArray(myArray);
 FindDifferenceMinMax(myArray);
-
 */
+
