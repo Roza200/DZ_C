@@ -15,7 +15,6 @@ void Show2dArray(double[,] array)
    {
     for(int j = 0; j < array.GetLength(1); j++)
         Console.Write(array[i,j] + " ");
-
     Console.WriteLine();
    }
 }
@@ -59,7 +58,7 @@ void SearchElementValueInArray(int[ ,] array,int row, int column)
 {
     if (row < array.GetLength(0) && column < array.GetLength(1)) 
         Console.WriteLine($"Element with the parameters {row}, {column} is {array[row,column]}");
-              
+                     
     else Console.WriteLine($"Element with the parameters {row}, {column} not in the array");
 }
 
@@ -94,8 +93,7 @@ int[,] CreateRandon2dArray(int rows, int columns, int minValue, int maxValue)
 
     for(int i = 0; i < rows; i++)
         for(int j =0 ; j < columns; j++)
-            newArray[i,j] = new Random().Next(minValue, maxValue + 1);     
-    
+            newArray[i,j] = new Random().Next(minValue, maxValue + 1);      
     return newArray;
 }
 
@@ -119,8 +117,7 @@ double[] ArithmeticMeanInColumn(int[,] array)
        for(int i = 0; i < array.GetLength(0); i++)
        
           sum += array[i, j]; 
-       averageArray[j] = Math.Round(sum / array.GetLength(0), 1);
-      
+       averageArray[j] = Math.Round(sum / array.GetLength(0), 1);  
     }   
     return averageArray;
 }
@@ -145,7 +142,7 @@ int[,] myArray = CreateRandon2dArray(m, n, min, max);
 Show2dArray(myArray);
 
 double[] arithmeticMeanInColumn = ArithmeticMeanInColumn(myArray);
-Console.WriteLine("The verages of each column are: ");
+Console.WriteLine("The verages of each column area: ");
 ShowArray(arithmeticMeanInColumn);
 */
 
