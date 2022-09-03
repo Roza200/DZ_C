@@ -10,7 +10,7 @@ double[,] RandomRealNumbersArray(int rows, int columns)
 
     for(int i = 0; i < rows; i++)
         for(int j =0 ; j < columns; j++)
-            newArray[i,j] = new Random().NextDouble() ;     
+            newArray[i,j] = new Random().NextDouble()*20-10;     
     
     return newArray;
 }
