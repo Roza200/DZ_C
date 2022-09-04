@@ -186,19 +186,16 @@ Show2dArray(multiplicationMatrix);
 */
 
 //Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
-//Массив размером 2 x 2 x 2
-//66(0,0,0) 25(0,1,0)
-//34(1,0,0) 41(1,1,0)
-//27(0,0,1) 90(0,1,1)
-//26(1,0,1) 55(1,1,1)
 /*
+
 int[, ,] CreateRandon3dArray(int x, int y, int z, int minValue, int maxValue)
 {
-    int[,] newArray = new int[x, y, z];
+    int[,,] newArray = new int[x, y, z];
 
-    for(int i = 0; i < rows; i++)
-        for(int j =0 ; j < columns; j++)
-            newArray[i,j] = new Random().Next(minValue, maxValue + 1);     
+    for(int i = 0; i < x; i++)
+        for(int j =0 ; j < y; j++)
+           for(int k = 0; k < z; k++)
+            newArray[i,j,k] = new Random().Next(minValue, maxValue + 1);     
     
     return newArray;
 }
@@ -214,12 +211,20 @@ void Show3dArray(int[, ,] array)
     Console.WriteLine();
    }
 }
-Console.Write("Input ferst size: ");
+Console.Write("Input first point: ");
 int x = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input number of colums: ");
+Console.Write("Input second point: ");
 int y = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input number of rows: ");
+Console.Write("Input third point : ");
 int z = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input min possible value: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input max possible value: ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+int[,,] newArray = CreateRandon3dArray(x, y, z, min, max);
+Show3dArray(newArray);
 */
 
 
@@ -227,15 +232,50 @@ int z = Convert.ToInt32(Console.ReadLine());
 
 //Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
 //Например, на выходе получается вот такой массив:
-//01 02 03 04
-//12 13 14 05
-//11 16 15 06
-//10 09 08 07
+/*
+int[,] Spiral2dArray(int rows, int columns)
+{
+    int[,] newArray = new int[rows, columns];
+    int temp = 1;
+    int i = 0;
+    int j = 0;
 
+    while (temp <= newArray.GetLength(0) * newArray.GetLength(1))
+         {
+            newArray[i, j] = temp;
+            temp++;
+                if (i <= j + 1 && i + j < newArray.GetLength(1) - 1)
+                      j++;
+                else if (i < j && i + j >= newArray.GetLength(0) - 1)
+                         i++;
+                    else if (i >= j && i + j > newArray.GetLength(1) - 1)
+                            j--;
+                        else
+                            i--;
+        }
+    return newArray;
+}
 
+void Show2dArray(int[,] array)
+{
+   for(int i = 0; i < array.GetLength(0); i++)
+   {
+    for(int j = 0; j < array.GetLength(1); j++)
+        Console.Write(array[i,j] + " ");
 
+    Console.WriteLine();
+   }
+}
 
+Console.Write("Input number of rows: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input number of colums: ");
+int n = Convert.ToInt32(Console.ReadLine());
 
+int[,] myArray = Spiral2dArray(m, n); 
+Show2dArray(myArray);
+
+*/
 
 
 
