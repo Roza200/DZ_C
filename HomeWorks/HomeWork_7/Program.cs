@@ -82,7 +82,6 @@ Show2dArray(myArray);
 SearchElementValueInArray(myArray, n1, m1);
 */
 
-
 //Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 
 /*
@@ -144,5 +143,5 @@ Show2dArray(myArray);
 double[] arithmeticMeanInColumn = ArithmeticMeanInColumn(myArray);
 Console.WriteLine("The verages of each column area: ");
 ShowArray(arithmeticMeanInColumn);
-*/
 
+*/
